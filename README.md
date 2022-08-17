@@ -25,6 +25,8 @@ export default {
 
 ```
 
+Don't forget edit your `README.md` and the infos in `package.json`
+
 ## License
 
 [MIT](./LICENSE) License © 2022 [Kitiho](https://github.com/kitiho)
