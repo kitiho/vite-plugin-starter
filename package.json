@@ -1,0 +1,43 @@
+{
+  "name": "vite-plugin-starter",
+  "version": "0.0.0",
+  "description": "Vite plugin starter",
+  "keywords": [
+    "vite-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitiho/vite-plugin-starter.git"
+  },
+  "author": "Kitiho <duanjipeng0328@gmail.com>",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "dev": "npm run build -- --watch",
+    "release": "bumpp --commit --push --tag && npm publish",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "vite": "^2.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.11.1",
+    "@types/node": "^16.11.11",
+    "bumpp": "^7.1.1",
+    "eslint": "^8.3.0",
+    "eslint-plugin-jest": "^25.3.0",
+    "tsup": "^5.10.0",
+    "typescript": "^4.5.2",
+    "vite": "^2.6.14"
+  }
+}
